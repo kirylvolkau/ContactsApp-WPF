@@ -1,0 +1,31 @@
+﻿<Window x:Class="ContactsApp.ContactWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContactsApp"
+        mc:Ignorable="d"
+        Title="ContactWindow" Height="300" Width="300">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0 10 0 10"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="0 5 0 5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBox x:Name="nameContactTextBox"/>
+            <TextBox x:Name="emailContactTextBox"/>
+            <TextBox x:Name="phoneContactTextBox"/>
+            <Button Content="Update" x:Name="updateButton"
+                    Click="updateButton_Click"/>
+            <Button Content="Delete" x:Name="deleteButton"
+                    Background="Red"
+                    Foreground="White"
+                    Click="deleteButton_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
